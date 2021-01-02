@@ -23,7 +23,7 @@
 
 The contents of this repository detail an analysis of my capstone project. This analysis is detailed in hopes of making the work accessible and replicable.
 
-**Blog Post:** 
+**Blog Post:** https://hpatel530.github.io/blog_number_7_by_hiten_patel
 
 
 
