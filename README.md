@@ -46,7 +46,7 @@ This multi-label CNN model was responsible in predicting up to 12 labels in any 
 
 ---
 
-Can we create a multi-label image classification system to help create an autonomous vehicles to mitigate car accidents and carbon dioxide?
+Can we create a multi-label image classification model to help create autonomous vehicles to mitigate car accidents?
 
 ## **Data**
 
