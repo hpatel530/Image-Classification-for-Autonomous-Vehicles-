@@ -27,7 +27,7 @@ The contents of this repository detail an analysis of my capstone project. This 
 
 
 
-<img src = selfdrivingreadme.jpeg>
+<img src = images/selfdrivingreadme.jpeg>
 
 ## **Abstract**
 
@@ -83,7 +83,7 @@ The dataset contains over 100,000 images and 100,000 videos. For this project, w
 The project was organized based on the OSEMN framework; Obtain-Scrub-Explore-Model-iNtrepretation; we will go through a brief overview of each step. 
 
 
-<img src = osemn.png>
+<img src = images/osemn.png>
 
 ### **Scrub**
 
@@ -116,11 +116,11 @@ and a high frequency:
 
 
 
-<img src = visual1.png>
+<img src = images/visual1.png>
 
 Once again, this is a multi-label image classification problem so let's take a look at what the label counts are per image. 
 
-<img src = visual2.png>
+<img src = images/visual2.png>
 
 As we can see above in the chart, 17,393 images had 4 labels. That was the most with 14,008 images had six labels coming in second. There were 13 images that had 11 labels and 0 images contained all 12 labels. 
 
@@ -137,9 +137,9 @@ Our first CNN model will keep the feature space wide and shallow in the initial 
 
 The best metric to measure our model is the Hamming Loss. Remember, hamming loss measures the incorrect predictions divided by the total number of predictions. For this model, we received a hamming score of .1292 (depending on the run), which in turn gives an accuracy of .8708. The next metric to measure our model is given by the accuracy on the test validation set which was approximately .2285 (depending on the run). The Val loss is .3288 and is greater than the loss at .2188, this could be signs of overfitting. In the first graph below, it illustrates the possibility of this model overfitting, we want the end points to be closer together. The second graph shows the similarites in accuracy which we also want the final points to end closely together as well. 
 
-<img src = "basic model .png">
+<img src = "images/basic model .png">
 
-<img src= "basic model img.png">
+<img src= "images/basic model img.png">
 
 #### **Tuned CNN Model**
 
@@ -214,9 +214,9 @@ def make_cnn(padding='same', dropout =.2, optimizer=keras.optimizers.Adam(lr=0.0
 
 The final tuned CNN model stopped at epoch 9 (depending on the run) to prevent over fitting. Once again, we will use the Hamming Score to measure the model which was .1172. A score closest to zero is what we cant and this was the best score thus far. This equals out to an accuracy of 89% (1-hamming score). The next metric to measure our model is given by the accuracy on the test validation set: approximately .006 (depending on the run). This is an extremely low score and may be a metric we choose to ignore. The loss for validation set (around .2645) is roughly the same as the loss for the train set (around .2698), signs of not overfitting. We can also take a look at the confusion matrix for the 12 labels. 
 
-<img src = "final model .png">
+<img src = "images/final model .png">
 
-<img src = "matrix .png">
+<img src = "images/matrix .png">
 
 #### **Pretrained Model** 
 
@@ -224,9 +224,9 @@ InceptionResNetV2
 
 For this pretrained model, we used an InceptionResNetV2 model and set the input and output parameters to meet our requirements. The base of this pretrained model is what we have added to make this tranfer learning successful. Although the model stopped at epoch 5 (depending on the run) to prevent overfitting, it has a very long training time. The hamming loss metric for this model was .1434(depending on the run) which in turn gives an accuracy of .8566. The next metric to measure our model is given by the accuracy on the test validation set which was approximately .9351(depending on the run). Wow!!! This is very interesting. All our models produced a very low accuracy score and this one was very high. The hamming score was higher of all the models.  The loss for validation set (around .271) is nearly equal to the loss for the train set (around .275), this shows no signs of overfitting. 
 
-<img src = "inception.png">
+<img src = "images/inception.png">
 
-<img src = "inception matrix .png">
+<img src = "images/inception matrix .png">
 
 >**Based on the results from our models, our tuned CNN model slightly outperformed our pretrained InceptionResNetV2 model. Both models returned a Hamming Loss Score of roughly 11-13% (depending on the run), both models showed no signs of overfitting.  CNN model had a test accuracy of roughly .006% (which was the lowest out of all the runs, usually around 10%) compared to the pretrained model returning a test accuracy score of roughly 93%. This was also an anomaly, usually we received around 10%. The metrics are interesting here, let's give each model a test run**
 
@@ -238,14 +238,14 @@ For this pretrained model, we used an InceptionResNetV2 model and set the input 
 
 **Test 1**
 
-<img src = "newtest .png" width="500">
+<img src = "images/newtest .png" width="500">
 
 **CNN Model**
-<img src = "Screen Shot 2020-12-19 at 10.03.11 AM.png" width="400">
+<img src = "images/Screen Shot 2020-12-19 at 10.03.11 AM.png" width="400">
 
 **Pretrained Model**
 
-<img src = "Screen Shot 2020-12-19 at 10.04.37 AM.png" width="400">
+<img src = "images/Screen Shot 2020-12-19 at 10.04.37 AM.png" width="400">
 
 >**Observations:**
 * The final model did not predict 'truck' and incorrectly predicted 'traffic light'. The model got 10/12 labels correct. 
@@ -253,15 +253,15 @@ For this pretrained model, we used an InceptionResNetV2 model and set the input 
 
 **Test 2**
 
-<img src = "testimage2.png" width="500">
+<img src = "images/testimage2.png" width="500">
 
 **CNN Model**
 
-<img src = "Screen Shot 2020-12-19 at 10.13.19 AM.png" width="400">
+<img src = "images/Screen Shot 2020-12-19 at 10.13.19 AM.png" width="400">
 
 **Pretrained Model**
 
-<img src = "Screen Shot 2020-12-19 at 10.14.18 AM.png" width="500">
+<img src = "images/Screen Shot 2020-12-19 at 10.14.18 AM.png" width="500">
 
 >**Observations:**
 * The final model did not predict 'bus', 'truck', 'motor' or 'person'. 8 of 12 labels predicted correctly. 
@@ -291,7 +291,7 @@ For this pretrained model, we used an InceptionResNetV2 model and set the input 
 
 
 
-<img src = "Screen Shot 2020-12-17 at 11.32.46 AM.png" width = "400">
+<img src = "images/Screen Shot 2020-12-17 at 11.32.46 AM.png" width = "400">
 
 ## **Recommendations**
 
